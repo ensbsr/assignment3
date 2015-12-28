@@ -1,0 +1,12 @@
+<html>
+<head><title>Courses</title></head>
+<body>
+<h1>Courses successfully added!</h1>
+<h2>Courses</h2>
+<ul>
+{% for course in course_list %}
+<li>{{ course.course_name }}, {{ course.course_code }}, {{ course.course_classroom }}, {{ course.course_time }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
