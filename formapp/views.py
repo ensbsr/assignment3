@@ -25,7 +25,7 @@ def addstudent(request):
                         RequestContext(request))
 
 def all_student(request):
-    return render_to_response('allstudent.html',
+    return render_to_response('tablestudent.html',
     {'student_list': Student.objects.all()})
 
 def addteacher(request):
@@ -46,7 +46,7 @@ def addteacher(request):
                         RequestContext(request))
 
 def all_teacher(request):
-    return render_to_response('allteacher.html',
+    return render_to_response('tableteacher.html',
     {'teacher_list': Teacher.objects.all()})
 
 def addcourse(request):
@@ -66,7 +66,7 @@ def addcourse(request):
                         RequestContext(request))
 
 def all_course(request):
-    return render_to_response('allcourse.html',
+    return render_to_response('coursetable.html',
     {'course_list': Course.objects.all()})
 
 
@@ -83,3 +83,4 @@ def enroll(request):
 
 
 	return render_to_response('enroll.html', {'form': form}, RequestContext(request))
+

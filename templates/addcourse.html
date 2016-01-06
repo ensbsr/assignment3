@@ -11,6 +11,8 @@ Please correct the error{{ form.errors|pluralize }} below.
 {% endif %}
 <form action="" method="post">
 {% csrf_token %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{%static 'new.css'%}"/>
 <table>
 {{ form.as_table }}
 </table>
